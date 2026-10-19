@@ -1,0 +1,17 @@
+name: Bug report
+description: Report a reproducible problem (no secrets or private inventories)
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Version and environment
+      description: MachinScope version, Windows build, x64, normal/elevated, route and theme
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and expected/actual behavior
+      description: Include steps and redacted error text. Security issues follow SECURITY.md.
+    validations:
+      required: true

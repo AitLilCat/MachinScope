@@ -1,0 +1,60 @@
+name: Prepare beta release
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Must match source version
+        required: true
+        default: 0.1.0-beta
+      publish:
+        description: Explicitly authorize publishing this beta to GitHub Releases
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: windows-2025
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - shell: pwsh
+        env:
+          RELEASE_VERSION: ${{ inputs.version }}
+        run: ./scripts/release.ps1 -Version $env:RELEASE_VERSION
+      - uses: actions/upload-artifact@v4
+        with:
+          name: beta-deliverables
+          path: |
+            artifacts/MachinScope-v0.1.0-beta-win-x64.zip
+            artifacts/SHA256SUMS.txt
+            docs/RELEASE_NOTES.md
+          if-no-files-found: error
+  publish:
+    if: inputs.publish
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    environment: public-beta
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: beta-deliverables
+          path: deliverables
+      - name: Publish authorized prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_VERSION: ${{ inputs.version }}
+          RELEASE_COMMIT: ${{ github.sha }}
+        run: |
+          test "$RELEASE_VERSION" = '0.1.0-beta'
+          cd deliverables/artifacts
+          sha256sum --check SHA256SUMS.txt
+          gh release create "v$RELEASE_VERSION" MachinScope-v0.1.0-beta-win-x64.zip SHA256SUMS.txt --target "$RELEASE_COMMIT" --title "MachinScope v$RELEASE_VERSION" --notes-file ../docs/RELEASE_NOTES.md --prerelease

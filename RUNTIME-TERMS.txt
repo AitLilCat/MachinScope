@@ -1,0 +1,14 @@
+MachinScope project-owned source is licensed under the accompanying MIT LICENSE.
+Bundled third-party components are separately licensed; the project's MIT license
+does not relicense them or grant rights beyond their original terms.
+
+Microsoft Windows App SDK redistributable components are provided under their
+accompanying Microsoft terms in THIRD-PARTY-NOTICES. Use and redistribution of
+those components are subject to those terms. End users and distributors must
+agree to those terms before using or redistributing those components. Retain the
+license and notice files with every distribution. If you do not agree, do not
+use or redistribute those components.
+
+Other components retain the MIT, Apache-2.0 and other notices indexed by
+THIRD-PARTY-NOTICES/packages.json. Nothing here transfers their ownership or
+suggests endorsement by Microsoft or any other dependency author.

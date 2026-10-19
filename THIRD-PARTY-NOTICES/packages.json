@@ -1,0 +1,486 @@
+[
+  {
+    "package": "MSTest.Analyzers/3.11.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "MSTest.TestAdapter/3.11.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "MSTest.TestFramework/3.11.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.ApplicationInsights/2.23.0",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.CodeCoverage/17.14.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.CodeCoverage-17.14.1/build__netstandard2.0__ThirdPartyNotices.txt",
+      "Microsoft.CodeCoverage-17.14.1/ThirdPartyNotices.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.Data.Sqlite.Core/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.Data.Sqlite/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.Extensions.DependencyInjection.Abstractions-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.DependencyInjection/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.Extensions.DependencyInjection-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging.Abstractions/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.Extensions.Logging.Abstractions-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Logging/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.Extensions.Logging-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Options/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.Extensions.Options-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.Extensions.Primitives/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.Extensions.Primitives-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.NET.ILLink.Tasks/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.NET.ILLink.Tasks-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "Microsoft.NET.Test.Sdk/17.14.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.TestPlatform.AdapterUtilities/17.13.0",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.TestPlatform.ObjectModel/17.14.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.TestPlatform.TestHost/17.14.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Microsoft.TestPlatform.TestHost-17.14.1/ThirdPartyNotices.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.Testing.Extensions.Telemetry/1.9.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.Testing.Extensions.TrxReport.Abstractions/1.9.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.Testing.Extensions.VSTestBridge/1.9.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.Testing.Platform.MSBuild/1.9.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.Testing.Platform/1.9.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.Web.WebView2/1.0.3179.45",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "LICENSE.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.Web.WebView2-1.0.3179.45/LICENSE.txt",
+      "Microsoft.Web.WebView2-1.0.3179.45/NOTICE.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.Windows.SDK.BuildTools.MSIX/1.7.20250829.1",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "sdk_license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.Windows.SDK.BuildTools.MSIX-1.7.20250829.1/NOTICE.txt",
+      "Microsoft.Windows.SDK.BuildTools.MSIX-1.7.20250829.1/sdk_license.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.Windows.SDK.BuildTools/10.0.26100.4654",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "",
+    "licenseUrl": "https://aka.ms/WinSDKLicenseURL",
+    "notices": []
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.AI/1.8.79",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.AI-1.8.79/license.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Base/1.8.251216001",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.Base-1.8.251216001/license.txt",
+      "Microsoft.WindowsAppSDK.Base-1.8.251216001/NOTICE.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.DWrite/1.8.25122902",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.DWrite-1.8.25122902/license.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Foundation/1.8.260803002",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.Foundation-1.8.260803002/license.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.InteractiveExperiences/1.8.260708001",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.InteractiveExperiences-1.8.260708001/license.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.ML/1.8.2223",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.ML-1.8.2223/license.txt",
+      "Microsoft.WindowsAppSDK.ML-1.8.2223/ThirdPartyNotices.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Runtime/1.8.260921001",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.Runtime-1.8.260921001/license.txt",
+      "Microsoft.WindowsAppSDK.Runtime-1.8.260921001/NOTICE.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.Widgets/1.8.251231004",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.Widgets-1.8.251231004/license.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK.WinUI/1.8.260803003",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK.WinUI-1.8.260803003/license.txt",
+      "Microsoft.WindowsAppSDK.WinUI-1.8.260803003/NOTICE.txt",
+      "Microsoft.WindowsAppSDK.WinUI-1.8.260803003/tools__NOTICE.txt"
+    ]
+  },
+  {
+    "package": "Microsoft.WindowsAppSDK/1.8.260921001",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "license.txt",
+    "licenseUrl": "https://aka.ms/deprecateLicenseUrl",
+    "notices": [
+      "Microsoft.WindowsAppSDK-1.8.260921001/license.txt",
+      "Microsoft.WindowsAppSDK-1.8.260921001/NOTICE.txt"
+    ]
+  },
+  {
+    "package": "Newtonsoft.Json/13.0.3",
+    "authors": "James Newton-King",
+    "copyright": "Copyright \u00a9 James Newton-King 2008",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "Newtonsoft.Json-13.0.3/LICENSE.md"
+    ]
+  },
+  {
+    "package": "SQLitePCLRaw.bundle_e_sqlite3/2.1.12",
+    "authors": "Eric Sink",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "notices": []
+  },
+  {
+    "package": "SQLitePCLRaw.core/2.1.12",
+    "authors": "Eric Sink",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "notices": []
+  },
+  {
+    "package": "SQLitePCLRaw.lib.e_sqlite3/2.1.12",
+    "authors": "Eric Sink",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "notices": []
+  },
+  {
+    "package": "SQLitePCLRaw.provider.e_sqlite3/2.1.12",
+    "authors": "Eric Sink",
+    "copyright": "Copyright 2014-2024 SourceGear, LLC",
+    "license": "Apache-2.0",
+    "licenseUrl": "https://licenses.nuget.org/Apache-2.0",
+    "notices": []
+  },
+  {
+    "package": "System.CodeDom/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "System.CodeDom-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "System.Configuration.ConfigurationManager/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "System.Configuration.ConfigurationManager-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "System.Diagnostics.EventLog/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "System.Diagnostics.EventLog-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "System.Diagnostics.PerformanceCounter/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "System.Diagnostics.PerformanceCounter-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "System.Management/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "System.Management-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "System.Numerics.Tensors/9.0.0",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "System.Numerics.Tensors-9.0.0/LICENSE.TXT",
+      "System.Numerics.Tensors-9.0.0/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "System.Security.Cryptography.ProtectedData/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "System.Security.Cryptography.ProtectedData-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "microsoft.aspnetcore.app.runtime.win-x64/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "microsoft.aspnetcore.app.runtime.win-x64-10.0.12/LICENSE.txt",
+      "microsoft.aspnetcore.app.runtime.win-x64-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "microsoft.netcore.app.runtime.win-x64/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "microsoft.netcore.app.runtime.win-x64-10.0.12/LICENSE.TXT",
+      "microsoft.netcore.app.runtime.win-x64-10.0.12/THIRD-PARTY-NOTICES.TXT"
+    ]
+  },
+  {
+    "package": "microsoft.windowsdesktop.app.runtime.win-x64/10.0.12",
+    "authors": "Microsoft",
+    "copyright": "\u00a9 Microsoft Corporation. All rights reserved.",
+    "license": "MIT",
+    "licenseUrl": "https://licenses.nuget.org/MIT",
+    "notices": [
+      "microsoft.windowsdesktop.app.runtime.win-x64-10.0.12/LICENSE"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><IsTestProject>true</IsTestProject><IsPackable>false</IsPackable></PropertyGroup><ItemGroup><ProjectReference Include="../../src/Core.Windows/Core.Windows.csproj" /><ProjectReference Include="../../src/Core.Persistence/Core.Persistence.csproj" /><PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" /><PackageReference Include="MSTest.TestFramework" Version="3.11.1" /><PackageReference Include="MSTest.TestAdapter" Version="3.11.1" /><Compile Include="../TestAssert.cs" Link="TestAssert.cs" /></ItemGroup></Project>
+
+
+

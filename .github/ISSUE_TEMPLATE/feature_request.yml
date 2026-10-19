@@ -1,0 +1,10 @@
+name: Feature request
+description: Suggest a focused inspection or administration improvement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and proposed behavior
+      description: Explain the use case, available Windows data sources and any privilege or safety implications.
+    validations:
+      required: true

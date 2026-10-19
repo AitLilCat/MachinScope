@@ -1,0 +1,30 @@
+name: Windows CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-2025
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - shell: pwsh
+        run: python scripts/audit-source.py
+      - shell: pwsh
+        run: python scripts/check-repository.py
+      - shell: pwsh
+        run: ./scripts/build.ps1
+      - shell: pwsh
+        run: ./scripts/test.ps1
+      - shell: pwsh
+        run: dotnet build CORE.slnx -c Release --no-restore -p:RunAnalyzersDuringBuild=true -p:EnableNETAnalyzers=true -p:AnalysisLevel=latest -warnaserror
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: artifacts/tests/**/*.trx
