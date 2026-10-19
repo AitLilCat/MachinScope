@@ -1,16 +1,16 @@
 # Changelog
 
-## 0.1.0-beta — prepared, unpublished
+## 0.1.0-beta (release candidate)
 
-First MachinScope public beta candidate, based on the existing CORE application.
+The first MachinScope beta. Source is public; the binary release is awaiting publication.
 
-- Processes, resource monitoring, storage, files, USB/devices, network, startup,
-  services and Windows administration inspection in the existing compact WinUI UI.
-- Table search, sort, properties, clipboard and CSV/JSON exports.
+- Process inspection, resource monitoring, storage, files, USB/PnP devices,
+  networking, startup, read-only services and native Windows administration tools.
+- Table filtering, sorting, column layouts, clipboard, properties and CSV/JSON export.
 - Reviewed process, individual-file and current-user startup controls.
-- MachinScope executable, visible branding and AitLilCat version metadata.
+- MachinScope branding and AitLilCat product metadata.
 - Absolute Explorer launch path and disposal of the Disk Management process wrapper.
-- Source/build guides, security policy, release automation, dependency notices,
-  verified portable archive and checksum generation.
+- Self-contained Windows x64 packaging, checksums, license notices and build guides.
+- Privilege-aware Windows tests with separate standard-user restart coverage.
 
-This does not claim a historical public release or implementation of roadmap items.
+Planned features are listed in [ROADMAP.md](ROADMAP.md).

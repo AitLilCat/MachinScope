@@ -29,7 +29,7 @@ Build/deployment reference: [Microsoft unpackaged WinUI deployment](https://lear
 
 ## Storage, file properties and window integration
 
-- [WinUI title-bar customization](https://learn.microsoft.com/en-us/windows/apps/develop/title-bar?tabs=winui3): SetTitleBar/ExtendsContentIntoTitleBar retain native caption controls. The desktop uses a native SystemParametersInfo high-contrast query because a WinRT event subscription failed in the unpackaged host.
+- [WinUI title-bar customization](https://learn.microsoft.com/en-us/windows/apps/develop/title-bar?tabs=winui3): SetTitleBar/ExtendsContentIntoTitleBar retain native caption controls. The desktop uses SystemParametersInfo to read high-contrast settings in the unpackaged host.
 - [MSFT_Disk](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/msft-disk) and MSFT_Partition: unique IDs, system/boot flags and GPT partition roles; legacy Win32 associations provide drive-letter links. Unknown topology does not authorize mutation.
 - [MSFT_StorageReliabilityCounter](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/msft-storagereliabilitycounter) through [the physical-disk association](https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/msft-physicaldisktostoragereliabilitycounter): optional raw reliability fields after unique-ID/serial correlation. No SMART/NVMe protocol decoding is claimed.
 - [FILE_STANDARD_INFO](https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-file_standard_info): GetFileInformationByHandleEx supplies per-object allocation/length/link/deletion information; unavailable calls do not fabricate values. Handle-based file identity and timestamps bracket explicit checksum reads.

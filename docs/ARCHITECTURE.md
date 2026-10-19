@@ -74,10 +74,11 @@ providers are unavailable. See [security boundaries](../SECURITY.md).
 
 Internal Core namespaces, resource keys, solution identifiers, serialized routes
 and `%LOCALAPPDATA%\CORE` settings/recovery paths are intentional compatibility
-contracts. Do not rename them as cosmetic cleanup.
+contracts. Keep them stable so existing preferences and recovery backups work.
 
-The compatibility facade and a string-based MainWindow adapter remain. Some
-contracts expose presentation tables rather than normalized native records.
+SystemInspector serves as a compatibility facade, and MainWindow maps route
+strings to inspectors. Some contracts return display tables rather than normalized
+native records.
 WMI cancellation cannot abort every provider call immediately. A future provider
 must preserve honest unavailable states and enforce action policy at execution,
 not rely on catalog metadata as authorization. Linux needs real providers and a

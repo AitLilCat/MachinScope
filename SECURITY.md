@@ -5,7 +5,6 @@ stable releases yet and no guaranteed response time. Report vulnerabilities
 privately using the repository's GitHub **Security → Report a vulnerability**
 facility if enabled. If it is unavailable, open an issue asking for a private
 reporting channel without publishing exploit details, secrets or inventories.
-No private email address is claimed by this policy.
 
 Include affected version, Windows build, privileges, impact and minimal steps.
 Redact usernames, paths, addresses, process command lines and device identifiers.
@@ -56,9 +55,9 @@ serial identifiers and startup backups may contain private information.
 
 ## Dependencies and distribution
 
-Source pattern scanning is a limited credential/path check, not proof that all
-secrets or security defects are absent. NuGet advisories have database/native
-coverage limits. Record checks for the exact source/artifact being released.
+Scan the exact source and artifacts being released. Pattern scans may miss
+credentials or private data, and NuGet advisories may not cover every native
+component. Neither replaces review.
 Application source has no automatic telemetry upload; bundled Microsoft runtime
 components and external native tools retain independent behavior and terms.
 

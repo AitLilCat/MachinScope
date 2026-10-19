@@ -23,13 +23,12 @@ outputs, raw inventories, credentials or user paths. Review screenshots for priv
 information. Report ordinary issues with app/Windows versions and reproducible
 steps. Vulnerabilities follow SECURITY.md; keep exploit details out of public issues.
 
-Project-owned contributions are MIT; retain third-party attribution and disclose
-material AI assistance accurately. Publishing requires explicit owner approval.
+Project-owned contributions are MIT licensed. Retain third-party attribution.
+Publishing requires explicit owner approval.
 
 ## Development provenance
 
-Developed and maintained by AitLilCat, with AI-assisted development, review, cleanup
-and documentation. The maintainer is responsible for direction, testing,
-maintenance and release decisions. This disclosure is not exclusive human-authorship
-or a transfer of third-party rights. Retain relevant contribution provenance and
-license notices.
+Developed and maintained by AitLilCat. AI assistance has been used for development,
+review, cleanup and documentation. AitLilCat remains responsible for project
+direction, testing, maintenance and releases. Preserve contributor provenance and
+third-party credits.

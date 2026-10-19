@@ -48,5 +48,4 @@ represent every UI/provider cost; operation durations can include dialog wait.
 Review startup/navigation latency, active/inactive CPU, long-running working set
 and handles, large-table interaction, scans/duplicates, cancellation/close and
 physical hotplug on appropriate hardware. See [VALIDATION.md](VALIDATION.md).
-Historical raw reports are kept privately; no historical speed ratio is presented
-as a current product benchmark.
+Keep raw reports local unless they have been reviewed for private data.

@@ -62,10 +62,9 @@ dotnet publish src/Core.Desktop/Core.Desktop.csproj -c Release -r win-x64 --self
 
 Outputs: `MachinScope-v0.1.0-beta-win-x64.zip` and `SHA256SUMS.txt` under `artifacts/`.
 GitHub-generated source downloads are sufficient for normal source distribution.
-For optional local review/offline handoff, `release.ps1 -IncludeSourceArchive` or
+For local review or offline handoff, `release.ps1 -IncludeSourceArchive` or
 `package-delivery.py --include-source` adds a source ZIP with per-file integrity
-checks. It is not a default GitHub Release asset. Existing stale source ZIPs in
-local artifacts are not included in the release workflow's explicit asset list.
+checks. The release workflow publishes only the Windows ZIP and checksum manifest.
 Runtime ZIP: EXE, launch README, MIT license, third-party metadata/license notices
 and a per-file integrity manifest. No SDK install is needed at runtime; embedded
 .NET/Windows App SDK/native SQLite resources extract on launch. Writable local
@@ -77,7 +76,7 @@ copy/shortcut helper, not a prerequisite for the portable ZIP.
 
 ## Revalidate an unchanged portable candidate
 
-For documentation-only changes, retain the existing EXE, Windows ZIP and bundled
+For documentation or test-only changes, retain the existing EXE, Windows ZIP and bundled
 notice files. Re-run the full checks and verify the archive without rewriting it:
 
 ```powershell
@@ -107,12 +106,13 @@ only after owner approval. Metadata is distinct from signing and SmartScreen tru
 `Core.Windows` native providers, `Core.Persistence` local storage and `Core.Desktop`
 the WinUI host. `tests` holds unit/integration tests and optional benchmarks.
 `docs` contains current architecture, features, APIs, platforms, measurement,
-validation and publishing guidance. Historical development records are private.
+validation and publishing guidance.
 `CORE.slnx`, routes, resource keys and `%LOCALAPPDATA%\CORE` paths stay compatible.
 Dependency versions are declared in projects; generated package lock files preserve
 transitive resolution. Normal builds use packages.lock.json; single-file publication
-uses separate packages.portable.lock.json files because the SDK adds ILLink tooling. Native SDK/runtime and ZIP timestamps mean
-byte-identical packages across different hosts are not promised.
+uses separate packages.portable.lock.json files because the SDK adds ILLink tooling.
+SDK/runtime versions and ZIP timestamps can vary between hosts, so byte-identical
+packages are not promised.
 
 CI uses Windows runners. Release workflow dispatch defaults to artifact-only;
 publication requires an explicit publish input and the public-beta environment.

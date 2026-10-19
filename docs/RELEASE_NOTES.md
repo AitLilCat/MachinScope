@@ -1,36 +1,59 @@
 # MachinScope v0.1.0-beta
 
-An early public beta candidate of a free, open-source Windows system inspector.
+An early Windows x64 beta for inspecting processes, hardware, devices, storage,
+files, networking and system configuration.
+
 See deeper. Understand more. Take control.
 
-Inspect processes and resource counters; hardware, disks/volumes and provider
-health; files/duplicates; present USB/PnP devices and session history; TCP/UDP
-endpoints and adapter traffic; startup, services, Windows configuration and native
-administration entry points. Filter/sort tables, inspect properties and export
-selected data. Existing guarded process/file/current-user startup actions remain.
+## Included
 
-Windows x64 only. Targets Windows 10 build 19041+; validation uses Windows 11.
-The portable ZIP embeds .NET and Windows App SDK; first launch extracts runtimes.
-Extract all files and run MachinScope.exe. Run as a normal user; unavailable
-metadata remains unavailable. Native utilities may request their own elevation.
+- Process relationships, resource counters and properties.
+- Disks, partitions, volumes, storage mappings and available provider health data.
+- Present USB/PnP devices, driver properties and session observations.
+- TCP/UDP endpoints, supported process associations and adapter traffic counters.
+- File browsing, hashes, duplicate analysis and reviewed individual-file operations.
+- Startup inventory, current-user Run recovery controls and read-only services.
+- Native Windows administration tools, table filters, sorting and CSV/JSON export.
 
-After publication, obtain MachinScope-v0.1.0-beta-win-x64.zip and SHA256SUMS.txt
-from this repository's Releases. No public release is claimed to exist yet.
-Use `Get-FileHash .\MachinScope-v0.1.0-beta-win-x64.zip -Algorithm SHA256`
-and compare its hash to the manifest before extraction. The manifest is an
-integrity check, not a digital signature.
+## Download and launch
 
-Known limits: provider health is not decoded SMART; device relationships do not
-prove physical ports or complete remembered-device inventory; session events can
-miss intermediate changes; packet capture, initiator direction, per-process
-bandwidth and connection byte counts are unavailable. Service/disk/device mutation,
-ISO/imaging and Linux are future work. See [the validation checklist](VALIDATION.md) for UI and clean-machine acceptance. Settings/recovery remain at %LOCALAPPDATA%\CORE.
+After publication, download `MachinScope-v0.1.0-beta-win-x64.zip` and
+`SHA256SUMS.txt` from [GitHub Releases](https://github.com/AitLilCat/MachinScope/releases).
+The binary release has not been published yet.
 
-The executable is unsigned. Publisher metadata and SmartScreen trust are distinct.
-Do not bypass Windows security controls. Build commands and pinned toolchain are
-in BUILDING.md; deterministic compilation does not promise byte-identical signed,
-timestamped or ZIP outputs across machines. MIT applies to project-owned code;
-bundled components retain their licenses in THIRD-PARTY-NOTICES.
+```powershell
+Get-FileHash .\MachinScope-v0.1.0-beta-win-x64.zip -Algorithm SHA256
+```
 
-Developed and maintained by AitLilCat, with AI-assisted development, review,
-cleanup and documentation.
+Compare the hash with the manifest, extract the complete archive and run
+`MachinScope.exe` as a normal user. .NET and Windows App SDK are embedded and
+extract on first launch. No separate runtime installation is required.
+Settings and recovery backups retain `%LOCALAPPDATA%\CORE` for compatibility.
+
+The application targets Windows 10 build 19041 or later. Recorded validation uses
+Windows 11 x64; other supported Windows versions and clean-machine launches need
+acceptance testing. The executable is unsigned. Checksums verify integrity, not
+publisher identity. Follow your device's security policies.
+
+## Limitations
+
+Protected fields and counters may be unavailable. Storage-provider health is not
+decoded SMART/NVMe diagnostics. Device relationships do not prove unused physical
+ports or complete non-present device inventory. Session observations can miss
+changes between samples. Packet capture, reliable initiator direction,
+per-process bandwidth and connection byte counts are unavailable.
+
+Services, disks and devices are read-only in the app. Native utilities apply their
+own authorization. ISO, imaging and Linux support are future work. See the
+[feature reference](FEATURES.md) and [validation checklist](VALIDATION.md).
+
+## Source and license
+
+Build instructions are in [BUILDING.md](../BUILDING.md). Locked dependencies and
+deterministic compilation support reproducible builds; byte-identical archives
+across different hosts are not promised.
+
+Project-owned code is [MIT licensed](../LICENSE). Bundled components retain their
+[notices](../THIRD-PARTY-NOTICES/README.md) and [runtime terms](../RUNTIME-TERMS.txt).
+
+Developed and maintained by AitLilCat.

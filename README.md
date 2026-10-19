@@ -4,17 +4,17 @@
 
 *See deeper. Understand more. Take control.*
 
-MachinScope is a free, open-source Windows system inspection and administration utility designed to bring your computer's processes, hardware, devices, networking, storage, and system tools together in one place.
+MachinScope is a free, open-source Windows system inspection and administration utility. It brings processes, hardware, devices, storage, networking and system tools together in one application.
 
-Built for users who want more than basic system monitoring, MachinScope focuses on detailed inspection, practical diagnostics, and direct access to Windows functionality without unnecessary complexity.
+Use compact technical tables to inspect system activity, investigate problems and open native Windows tools.
 
 **No accounts. No subscriptions. No mandatory internet connection.**
 
-Free, local-first and lightweight by design, MachinScope presents practical technical information in compact tables. Core inspection works offline; optional network diagnostics contact the host you request.
+Core inspection works offline. Optional network diagnostics contact the host you request and use your configured DNS resolvers.
 
 ## Current beta
 
-**v0.1.0-beta** is the initial Windows x64 release candidate, awaiting public publication. It focuses on reliable system discovery and existing Windows tooling. Information availability depends on Windows APIs, hardware, providers and permissions.
+**v0.1.0-beta** is the first Windows x64 release candidate. The source is public; the binary release is awaiting publication. Available information depends on Windows APIs, hardware, providers and permissions.
 
 ## What can MachinScope do?
 
@@ -46,11 +46,11 @@ Inspection tables support filtering, sorting, properties, column layouts, clipbo
 
 ## Screenshots
 
-Screenshots will be added after review and removal of private system information.
+Screenshots will be added after review for private system information.
 
 ## Download
 
-Windows x64 builds will be available from [GitHub Releases](https://github.com/AitLilCat/MachinScope/releases). The first public beta is awaiting publication.
+The portable Windows x64 build will be available from [GitHub Releases](https://github.com/AitLilCat/MachinScope/releases) after publication.
 
 The current beta is unsigned. Windows may display a publisher or reputation warning. Verify releases using the supplied SHA-256 checksums and follow your device's security policies.
 
@@ -84,13 +84,7 @@ Linux and ARM64 desktop releases are not available. See [platform support](docs/
 
 **One application. Deeper visibility. More control.**
 
-MachinScope is being developed as an all-in-one environment for understanding and managing Windows systems.
-
-The current beta focuses on comprehensive and reliable system discovery within the limits of the available operating-system data.
-
-Future releases aim to expand into advanced disk diagnostics, storage management, ISO creation, bootable media, virtual-machine utilities, and deeper Windows administration.
-
-Our long-term ambition is to provide powerful system tooling in a single, efficient application that remains free and open-source.
+The goal is one free, open-source environment for understanding and managing Windows systems. The current beta focuses on inspection. Longer-term work may add disk diagnostics, storage management, ISO and bootable-media tools, virtualization utilities and deeper Windows administration.
 
 ### Development Roadmap
 

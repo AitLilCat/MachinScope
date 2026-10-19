@@ -11,9 +11,9 @@ python scripts/audit-source.py
 python scripts/check-repository.py
 ```
 
-The existing MSTest unit and Windows integration suites must execute; a historical
-pass count is not acceptance for a changed source tree. `test.ps1` requires both
-reports and fails incomplete/failed runs. Keep raw TRX/logs private in `artifacts/`.
+Run both MSTest suites for each candidate. `test.ps1` requires complete passing
+reports for every selected suite. Keep raw TRX files and logs in ignored
+`artifacts/` storage.
 Fixtures use disposable processes/files and dedicated test registry keys, not real
 disk mutations. Native-provider tests depend on the host.
 
@@ -59,10 +59,9 @@ verifies metadata, executes the opt-in WinUI bootstrap probe and checks archive
 CRC/per-file SHA-256 and distribution checksums. The probe runs outside the source
 working directory. It does not open MainWindow or certify interactive behavior.
 
-For documentation-only cleanup, preserve the previously verified portable EXE
+For documentation or test-only changes, preserve the verified portable EXE
 and ZIP. Compare their hashes before/after, verify ZIP entries and checksum
-manifest, and build/test the cleaned source. Do not substitute a rebuilt artifact
-without treating it as a new candidate. GitHub-hosted workflow execution and the
+manifest, and build/test the cleaned source. A rebuilt artifact needs fresh acceptance. GitHub-hosted workflow execution and the
 optional signing branch need their own validation.
 
 ## Interactive acceptance

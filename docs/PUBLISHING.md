@@ -9,14 +9,14 @@ identifiers. README.md becomes the GitHub repository homepage automatically.
 
 Do not commit `.tools/`, bin/obj, local configuration, raw inventories/test reports,
 private development archives, logs or portable/source ZIPs. `.gitignore` excludes
-local/generated outputs. Historical development records are stored outside the
-repository, not in the public source tree.
+local/generated outputs. Keep historical development records outside the public source tree.
 
 ## Local review and commit
 
-The preparation branch is `codex/public-beta`, based on the existing MIT license
-commit in `origin/main`. Origin is https://github.com/AitLilCat/MachinScope.git.
-Keep that history; do not create a replacement repository or force push.
+Use `codex/public-beta` for the publication candidate. It includes the public
+source and the process-test CI fix. Origin is
+https://github.com/AitLilCat/MachinScope.git. Preserve the existing history; do not
+create a replacement repository or force push.
 
 ```powershell
 git status --short --branch
@@ -39,11 +39,11 @@ unsigned artifacts accurately. Keep reviewed screenshots free of private data.
 git fetch origin
 git merge origin/main
 git push -u origin codex/public-beta
-gh pr create --base main --head codex/public-beta --title "Prepare MachinScope v0.1.0-beta" --body-file docs/RELEASE_NOTES.md
+gh pr create --base main --head codex/public-beta --title "Finalize MachinScope beta documentation and CI" --body-file docs/RELEASE_NOTES.md
 ```
 
 Resolve/test any remote changes locally. Review/merge through the repository's
-normal process. These commands are instructions, not authorization to publish.
+normal process. Run these commands only after the owner approves the push and pull request.
 
 ## GitHub Releases
 
@@ -60,7 +60,6 @@ Inspect artifacts/checksums. Only after explicit owner authorization, dispatch
 with `publish=true` to create the prerelease. There is no automatic push/tag
 publication trigger. Hosted workflow execution requires its own validation.
 
-For documentation-only cleanup, use the preserved-candidate mode documented in
-[BUILDING.md](../BUILDING.md). Do not silently replace a verified Windows archive
-with a newly built executable. Nothing in these instructions weakens Windows
-security policies or grants permission to publish.
+For documentation or test-only changes, use the preserved-candidate mode in
+[BUILDING.md](../BUILDING.md). Keep the verified EXE and ZIP unchanged. Production
+changes require a new build and artifact acceptance.

@@ -5,14 +5,14 @@
 The goal is practical visibility and control in one efficient, free, open-source
 application. This roadmap describes direction, not fixed dates or guarantees.
 
-## v0.1.0-beta — Current release candidate
+## v0.1.0-beta (current release candidate)
 
 Initial Windows system discovery, inspection and existing Windows tooling:
 processes and resource counters, hardware/storage, files, present USB/PnP devices,
 network endpoints and adapter traffic, startup, read-only services, configuration
 information and native administration entry points. Filtering, sorting, properties
 and exports support investigation. See [current capabilities](docs/FEATURES.md).
-The beta is awaiting public publication.
+The source is public; the binary release is awaiting publication.
 
 ## v0.2.0-beta
 
@@ -44,5 +44,5 @@ operations require deliberate confirmation and isolated validation.
 Possible Linux support depends on real native providers, a maintainable frontend
 and platform-specific tests. Shared .NET code does not imply a Linux desktop release.
 
-Advanced features are not assigned to a particular upcoming version without a
-verified implementation and validation plan. They are not current beta promises.
+Advanced features are not assigned to a version until an implementation and
+validation plan is available.
