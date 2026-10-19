@@ -27,11 +27,24 @@ namespace Core.IntegrationTests;
         var i = Inspector(); var self = i.Processes().Single(p => p.Id == Environment.ProcessId); var d = await i.DetailsAsync(self, default); Assert.Contains(d.General.Rows, r => r[0] == "Executable" && File.Exists(r[1])); Assert.NotEmpty(d.Threads.Rows); Assert.NotEmpty(d.Modules.Rows);
     }
     [TestMethod] public async Task LocalDiagnosticsOnly() { var d = new NetworkDiagnostics(); Assert.Contains("127.0.0.1", await d.RunAsync("DNS", "localhost", 80, default)); }
-    [TestMethod] public async Task ManagedRestartCreatesNewIdentityAndRejectsUnknownContext()
+    [TestMethod, TestCategory(ProcessTestEnvironment.StandardUserCategory)] public async Task ManagedRestartCreatesNewIdentityAndRejectsUnknownContext()
     {
-        var inspector = Inspector(); var host = Environment.GetEnvironmentVariable("DOTNET_HOST_PATH") ?? Environment.ProcessPath!; Core.Domain.Models.ProcessSample? child = null;
+        ProcessTestEnvironment.RequireStandardUser();
+        var inspector = Inspector(); var host = ProcessTestEnvironment.DotnetHost; Core.Domain.Models.ProcessSample? child = null;
         try { child = inspector.LaunchManaged(new(host, [typeof(WindowsTests).Assembly.Location, "--process-fixture"], AppContext.BaseDirectory)); Assert.True(inspector.CanRestart(child).Available); Assert.False(inspector.CanRestart(child with { Started = child.Started?.AddSeconds(1) }).Available); var previous = child; child = inspector.RestartProcess(child); Assert.NotEqual(previous.Identity, child.Identity); Assert.False(inspector.CanRestart(previous).Available); await Task.Delay(200); Assert.Contains(inspector.Processes(), p => p.Identity == child.Identity); }
         finally { if (child != null) try { inspector.EndProcess(child, false); } catch (InvalidOperationException) { } }
+    }
+    [TestMethod, TestCategory("ProcessLaunchSecurity")] public void ManagedLaunchEnforcesActualIntegrityBeforePathValidation()
+    {
+        var integrity = ProcessTestEnvironment.Integrity();
+        var inspector = Inspector();
+        // Intentionally unqualified: even a permitted Medium session cannot launch it.
+        var invalid = new Core.Domain.Models.LaunchSpec("unqualified-fixture-executable", [], AppContext.BaseDirectory);
+        if (integrity == "Medium") Assert.Throws<ArgumentException>(() => inspector.LaunchManaged(invalid));
+        else {
+            var error = Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsExactly<InvalidOperationException>(() => inspector.LaunchManaged(invalid));
+            Assert.Equal(ProcessTestEnvironment.LaunchDeniedMessage, error.Message);
+        }
     }
     [TestMethod] public async Task ResourceTablesHaveConsistentUnitsAndSeparateMemory()
     {

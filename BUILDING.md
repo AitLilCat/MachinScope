@@ -23,7 +23,12 @@ dotnet list CORE.slnx package --vulnerable --include-transitive --format json
 
 `build.ps1` wraps restore/build. `test.ps1` runs both MSTest suites and checks that
 both reports contain only passing tests. Fixtures use disposable processes/files
-and dedicated test registry keys; do not run tests as administrator. Native
+and dedicated test registry keys. Managed restart coverage requires Medium process
+integrity; the script selects applicable categories and records environment
+exclusions explicitly. Use `test.ps1 -StandardUserProcessLaunch Require` in a
+normal user terminal for full restart coverage. Elevated CI still runs the real
+launch-denial security test and other native fixtures. See
+[test environments](docs/VALIDATION.md#native-process-launch-context). Native
 integration checks depend on Windows providers and host hardware. Raw logs/TRX
 are private local artifacts under `artifacts/`, which is ignored.
 

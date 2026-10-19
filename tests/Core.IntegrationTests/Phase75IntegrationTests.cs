@@ -44,15 +44,15 @@ namespace Core.IntegrationTests;
     [TestMethod] public async Task TerminatedProcessInspectionKeepsOriginalIdentityRatherThanThrowingOrRejoining()
     {
         var inspector = new SystemInspector(NullLogger<SystemInspector>.Instance);
-        var host = Environment.GetEnvironmentVariable("DOTNET_HOST_PATH") ?? Environment.ProcessPath!;
-        var child = inspector.LaunchManaged(new(host, [typeof(Phase75IntegrationTests).Assembly.Location, "--process-fixture"], AppContext.BaseDirectory));
+        using var process = await ProcessTestEnvironment.StartOwnedFixture();
         try {
-            using var process = Process.GetProcessById(child.Id); inspector.EndProcess(child, false); await process.WaitForExitAsync();
+            var child = inspector.Processes().Single(p => p.Id == process.Id);
+            inspector.EndProcess(child, false); await process.WaitForExitAsync().WaitAsync(TimeSpan.FromSeconds(10));
             var result = await inspector.DetailsAsync(child, default);
             Assert.Contains(result.General.Rows, r => r[0] == "Started" && r[1] == child.Started?.ToString("O"));
             Assert.Contains(result.General.Rows, r => r[0] == "Inspection status" && r[1].Contains("snapshot only"));
             Assert.Equal("Status", result.Modules.Columns[0]);
-        } finally { try { inspector.EndProcess(child, false); } catch (Exception e) when (e is InvalidOperationException or System.ComponentModel.Win32Exception) { } }
+        } finally { await ProcessTestEnvironment.StopOwnedFixture(process); }
     }
     [TestMethod] public async Task DiskLayoutRetainsTypedVolumeAndPartitionRelationships()
     {

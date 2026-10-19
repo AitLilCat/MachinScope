@@ -15,7 +15,44 @@ The existing MSTest unit and Windows integration suites must execute; a historic
 pass count is not acceptance for a changed source tree. `test.ps1` requires both
 reports and fails incomplete/failed runs. Keep raw TRX/logs private in `artifacts/`.
 Fixtures use disposable processes/files and dedicated test registry keys, not real
-disk mutations. Run without elevation. Native-provider tests depend on the host.
+disk mutations. Native-provider tests depend on the host.
+
+### Native process-launch context
+
+Managed launch/restart intentionally permits only a real Medium-integrity session.
+GitHub-hosted Windows runners run as administrators with UAC disabled
+([runner privileges](https://docs.github.com/en/actions/reference/runners/github-hosted-runners#administrative-privileges));
+they do not satisfy this application safety requirement. Do not inject a fake
+Medium token, weaken the launch guard or elevate/demote the machine to pass tests.
+
+`test.ps1` probes the real native provider using the inherited process token and
+records only integrity and suite selection in `test-context.json` beside TRX files.
+The baseline suite always executes terminated-process inspection and
+`ProcessLaunchSecurity`, which checks the actual app guard before path validation:
+non-Medium contexts must receive the safety rejection, while Medium contexts reach
+ordinary invalid-path validation without launching a child.
+
+`ManagedRestartCreatesNewIdentityAndRejectsUnknownContext` belongs to
+`StandardUserProcessLaunch`. Auto selection runs this separate category only under
+Medium integrity. Otherwise it is explicitly excluded and never counted as passing.
+Unknown/unreadable probe context fails suite selection. A direct `dotnet test` run
+in an unsuitable context reports the restart test as inconclusive, not successful.
+The terminated-process test uses its own readiness-checked disposable fixture and
+does not depend on managed launch/restart. No interactive desktop is needed for
+these fixtures, but real Medium integrity is required for the restart feature.
+
+```powershell
+# Normal complete run: applicable categories selected from real native context
+.\scripts\test.ps1
+# Fail if the full restart category cannot actually execute (normal user terminal)
+.\scripts\test.ps1 -StandardUserProcessLaunch Require
+# Exercise baseline selection without claiming restart coverage
+.\scripts\test.ps1 -StandardUserProcessLaunch Exclude
+```
+
+CI uploads context JSON and TRX and records category execution in the job summary.
+Retain real Medium-session coverage before releases as well as elevated-runner
+guard coverage; exclusion is an environment boundary, not feature acceptance.
 
 For a new executable, `release.ps1` also runs advisory/analyzer checks, publishes,
 verifies metadata, executes the opt-in WinUI bootstrap probe and checks archive

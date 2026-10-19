@@ -19,7 +19,8 @@ jobs:
         run: python scripts/check-repository.py
       - shell: pwsh
         run: ./scripts/build.ps1
-      - shell: pwsh
+      - name: Test Windows providers and real-token launch security
+        shell: pwsh
         run: ./scripts/test.ps1
       - shell: pwsh
         run: dotnet build CORE.slnx -c Release --no-restore -p:RunAnalyzersDuringBuild=true -p:EnableNETAnalyzers=true -p:AnalysisLevel=latest -warnaserror
@@ -27,4 +28,6 @@ jobs:
         if: always()
         with:
           name: test-results
-          path: artifacts/tests/**/*.trx
+          path: |
+            artifacts/tests/**/*.trx
+            artifacts/tests/**/test-context.json
